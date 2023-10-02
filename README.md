@@ -1,2 +1,2 @@
 # ChronoMate-Suite
-This is application allowing users to track their time. 
+This is CLI application allowing employees to track their time. 
