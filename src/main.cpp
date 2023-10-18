@@ -18,7 +18,12 @@ int main(){
         std::cout << "Choose an option." << std::endl;
 
         int choice;
-        std::cin >> choice;
+        if(!(std::cin >> choice)){
+            std::cout << "Invalid option. Choose a valid option." << std::endl;
+            std::cin.clear();   
+            std::cin.ignore(); 
+            continue;
+        };
 
         switch(choice){
             case 1: {
@@ -61,6 +66,7 @@ int main(){
             }
             default:{
                 std::cout << "Invalid option. Choose a valid option." << std::endl;
+                break;
             }
         }
     }
