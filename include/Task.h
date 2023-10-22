@@ -2,6 +2,7 @@
 This headers declares Task class, its methods and its attributes.
 */
 #include <iostream>
+#include <ctime>
 
 #ifndef TASK_H 
 #define TASK_H

@@ -2,6 +2,7 @@
 This header declares TimeTracker class, its methods and its attributes.
 */
 #include "Task.h"
+#include <vector>
 
 #ifndef TIME_TRACKER_H
 #define TIME_TRACKER_H
