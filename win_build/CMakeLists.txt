@@ -1,15 +1,16 @@
 cmake_minimum_required(VERSION 3.0)
+set(CMAKE_SYSTEM_NAME Windows)
 
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
-#if (WIN32)
-    set(EXE_NAME CHRONOMATE-SUITE.exe)
-    set(CMAKE_CXX_COMPILER x86_64-w64-mingw32-g++)
-    set(CMAKE_C_COMPILER x86_64-w64-mingw32-gcc)
-#endif()
+
+set(EXE_NAME CHRONOMATE-SUITE.exe)
+set(CMAKE_CXX_COMPILER x86_64-w64-mingw32-g++)
+set(CMAKE_C_COMPILER x86_64-w64-mingw32-gcc)
+
 
 
 project(CHRONOMATE-SUITE VERSION 1.0)
