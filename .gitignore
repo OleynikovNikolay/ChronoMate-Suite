@@ -10,6 +10,3 @@ CMakeFiles/
 # ignoring ds_store
 .DS_Store
 src/.DS_Store
-
-# ignoring docker 
-Docker/

@@ -9,7 +9,9 @@ The Time Tracking CLI (Command Line Interface) application is a software tool de
 * Time Reporting: Users can view a report of all tracked tasks, showing the task names and the time spent on each task.
 * File Export: The application allows users to save their time tracking data to a file. This feature is helpful for keeping a record of time spent on various activities over time.
 
-## Installation
+## Installation 
+
+### CMake MacOS
 1. Clone the repo
 ```
 git clone https://github.com/OleynikovNikolay/ChronoMate-Suite
@@ -23,6 +25,31 @@ make
 3. Change directory for binary file path
 ```
 cd bin
+```
+
+### Docker MacOS / Linux
+1. Clone the repo
+```
+git clone https://github.com/OleynikovNikolay/ChronoMate-Suite
+cd CHRONOMATE-SUITE
+```
+2. Build docker image
+```
+docker build -t chronomate-suite
+```
+3. Check if the image has been successfully built
+```
+docker images | grep chronomate-suite
+```
+4. Run docker in interactive terminal session 
+```
+docker run -it chronomate-suite 
+```
+
+### Pulling from DockerHub 
+You may also pull the image (linux/arm64/v8) directly from DockerHub. 
+```
+docker pull 20041996/chronomate-suite:latest
 ```
 
 ## Usage:
