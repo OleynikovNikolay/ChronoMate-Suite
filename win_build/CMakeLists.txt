@@ -31,6 +31,9 @@ set_target_properties(${EXE_NAME} PROPERTIES
     LINK_FLAGS "-m64"
 )
 
+# static linking
+set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+target_link_libraries(${EXE_NAME} -static-libgcc -static-libstdc++)
 
 
 target_include_directories(${EXE_NAME} PRIVATE ../include)
