@@ -27,7 +27,14 @@ make
 cd bin
 ```
 
-### Docker MacOS / Linux
+### Docker MacOS {Apple Silicon M1 (and M2) chip having AArch64=ARM64} / Linux
+Check you architecture on MacOS 
+```
+arch
+```
+If it has `arm64` then you macOS is suitable for this image. 
+
+
 1. Clone the repo
 ```
 git clone https://github.com/OleynikovNikolay/ChronoMate-Suite
@@ -46,15 +53,21 @@ docker images | grep chronomate-suite
 docker run -it chronomate-suite 
 ```
 
-### Pulling from DockerHub 
+### Pulling image from DockerHub for Linux and MacOS {Apple Silicon M1 (and M2) chip having AArch64=ARM64}
 You may also pull the image (linux/arm64/v8) directly from DockerHub. 
 ```
 docker pull 20041996/chronomate-suite:latest
 ```
 
+
 ## Usage:
+* Local repo
 ```
 ./CHRONOMATE-SUITE
+```
+* Docker image
+```
+docker run -it 20041996/chronomate-suite
 ```
 
 
