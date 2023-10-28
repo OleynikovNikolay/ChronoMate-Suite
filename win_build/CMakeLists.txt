@@ -40,6 +40,6 @@ target_link_libraries(${EXE_NAME} -static-libgcc -static-libstdc++)
 #set_property(TARGET winpthread PROPERTY IMPORTED_LOCATION <path_to_libwinpthread-1.dll>)
 
 # linking the winpthread library to your executable
-#target_link_libraries(${EXE_NAME} winpthread)
+target_link_libraries(${EXE_NAME} winpthread)
 
 target_include_directories(${EXE_NAME} PRIVATE ../include)
