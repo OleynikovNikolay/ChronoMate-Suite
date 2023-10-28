@@ -38,11 +38,8 @@ set_target_properties(${EXE_NAME} PROPERTIES
 )
 
 # static linking
-set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
-target_link_libraries(${EXE_NAME} -static-libgcc -static-libstdc++ -Wl,-Bstatic -lstdc++ -lpthread -Wl,-Bdynamic)
+set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++ -static")
+target_link_libraries(${EXE_NAME} -static-libgcc -static-libstdc++ -static)
 
-# adding the libwinpthread-1.dll library to your project
-#add_library(winpthread SHARED IMPORTED)
-#set_property(TARGET winpthread PROPERTY IMPORTED_LOCATION <path_to_libwinpthread-1.dll>)
 
 target_include_directories(${EXE_NAME} PRIVATE ../include)
