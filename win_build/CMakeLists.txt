@@ -6,6 +6,12 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
+set(CMAKE_FIND_ROOT_PATH
+   "/opt/homebrew/Cellar/mingw-w64/11.0.1/toolchain-x86_64/x86_64-w64-mingw32/bin"
+)
+
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY BOTH)
+
 
 set(EXE_NAME CHRONOMATE-SUITE)
 set(CMAKE_CXX_COMPILER x86_64-w64-mingw32-g++)
@@ -33,13 +39,13 @@ set_target_properties(${EXE_NAME} PROPERTIES
 
 # static linking
 set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
-target_link_libraries(${EXE_NAME} -static-libgcc -static-libstdc++ -Wl,-Bstatic -lpthread -Wl,-Bdynamic)
+target_link_libraries(${EXE_NAME} -static-libgcc -static-libstdc++)
 
 # adding the libwinpthread-1.dll library to your project
 #add_library(winpthread SHARED IMPORTED)
 #set_property(TARGET winpthread PROPERTY IMPORTED_LOCATION <path_to_libwinpthread-1.dll>)
 
 # linking the winpthread library to your executable
-#target_link_libraries(${EXE_NAME} winpthread)
+target_link_libraries(${EXE_NAME} winpthread)
 
 target_include_directories(${EXE_NAME} PRIVATE ../include)
