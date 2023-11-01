@@ -42,7 +42,7 @@ cd CHRONOMATE-SUITE
 ```
 2. Build docker image
 ```
-docker build -t chronomate-suite
+docker build -t chronomate-suite .
 ```
 3. Check if the image has been successfully built
 ```
